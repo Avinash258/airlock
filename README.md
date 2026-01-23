@@ -52,12 +52,7 @@ kiosk-automation/
    - WebDriverManager (for automatic driver management)
    - Other required dependencies
 
-3. **Update configuration** in `src/main/resources/config.properties`:
-   ```properties
-   kiosk.url=https://arjun-up.ryarramsetti.axiadids.net:8442/user
-   username=arun10
-   password=test
-   browser=chrome
+
    ```
 
 ## Running Tests
