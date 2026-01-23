@@ -232,6 +232,75 @@ If you need to find element locators for your kiosk system:
 4. Right-click on element → Inspect
 5. Right-click on HTML → Copy → Copy selector (CSS) or Copy XPath
 
+## Desktop Automation
+
+The project includes a `DesktopAutomation` utility class for keyboard and mouse automation using Java Robot class.
+
+### Features:
+- Keyboard simulation (typing, key combinations)
+- Mouse operations (click, double-click, right-click, scroll)
+- Screen capture
+- Window management (Alt+Tab, Win+R, etc.)
+
+### Usage Example:
+
+```java
+import com.kiosk.utils.DesktopAutomation;
+
+DesktopAutomation desktop = new DesktopAutomation();
+
+// Type text
+desktop.typeText("Hello World");
+
+// Click at coordinates
+desktop.click(100, 200);
+
+// Press key combination
+desktop.keyPress(KeyEvent.VK_CONTROL, KeyEvent.VK_C);
+
+// Take screenshot
+desktop.captureScreen("screenshot.png");
+```
+
+## Windows Task Scheduler - Auto Run on Login
+
+The project includes scripts and utilities to automatically run the automation when Windows logs in.
+
+### Quick Setup (Automated):
+
+1. **Run PowerShell as Administrator:**
+   ```powershell
+   cd scripts
+   .\create-scheduled-task.ps1
+   ```
+
+2. **Follow the prompts** - The script will create the scheduled task automatically
+
+### Manual Setup:
+
+See detailed instructions in: `scripts/setup-windows-scheduler.md`
+
+### Running Automation Manually:
+
+**Using Maven:**
+```bash
+mvn exec:java -Dexec.mainClass="com.kiosk.KioskAutomationRunner"
+```
+
+**Using Batch Script:**
+```bash
+scripts\run-kiosk-automation.bat
+```
+
+**Using PowerShell Script:**
+```powershell
+scripts\run-kiosk-automation.ps1
+```
+
+### Logs:
+
+All automation runs are logged to the `logs/` directory with timestamps.
+
 ## Next Steps
 
 1. **Identify page elements** - Use browser DevTools to find element locators
@@ -239,6 +308,7 @@ If you need to find element locators for your kiosk system:
 3. **Add more page objects** - Create page objects for other pages in your kiosk
 4. **Extend test cases** - Add more comprehensive test scenarios
 5. **Add reporting** - Integrate ExtentReports or Allure for better reporting
+6. **Schedule automation** - Set up Windows Task Scheduler for automatic execution
 
 ## License
 
