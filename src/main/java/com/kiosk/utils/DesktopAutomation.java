@@ -1,6 +1,7 @@
 package com.kiosk.utils;
 
 import java.awt.*;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -203,7 +204,7 @@ public class DesktopAutomation {
             case 't': case 'T': return KeyEvent.VK_T;
             case 'u': case 'U': return KeyEvent.VK_U;
             case 'v': case 'V': return KeyEvent.VK_V;
-            case 'w': case 'W': return KeyEvent.VK_V;
+            case 'w': case 'W': return KeyEvent.VK_W;
             case 'x': case 'X': return KeyEvent.VK_X;
             case 'y': case 'Y': return KeyEvent.VK_Y;
             case 'z': case 'Z': return KeyEvent.VK_Z;
