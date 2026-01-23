@@ -82,6 +82,33 @@ mvn test -DsuiteXmlFile=testng.xml
 - Right-click on test class → Run As → TestNG Test
 - Or run `testng.xml` → Run As → TestNG Suite
 
+## GitHub Actions CI/CD
+
+This project includes GitHub Actions workflow for continuous integration. Tests run automatically on:
+
+- **Push** to `main`, `master`, or `develop` branches
+- **Pull requests** to `main`, `master`, or `develop` branches
+- **Manual trigger** via workflow_dispatch
+
+### CI Workflow Features:
+
+- ✅ Automatic test execution on every push/PR
+- ✅ Runs on Ubuntu latest with Java 11
+- ✅ Headless Chrome browser for CI environment
+- ✅ Test reports and screenshots uploaded as artifacts
+- ✅ Test results published as GitHub checks
+
+### View CI Status:
+
+1. Go to your GitHub repository
+2. Click on the **"Actions"** tab
+3. View test runs and results
+4. Download test reports and screenshots from artifacts
+
+### Workflow File:
+
+The CI configuration is located at: `.github/workflows/ci.yml`
+
 ## Configuration
 
 Edit `src/main/resources/config.properties` to customize:
@@ -132,6 +159,7 @@ timeout=15
 ✅ **TestNG Integration** - Powerful test execution and reporting  
 ✅ **SSL Certificate Handling** - Configured to handle insecure certificates  
 ✅ **Screenshot Support** - Built-in screenshot capabilities  
+✅ **GitHub Actions CI/CD** - Automated testing on every push and pull request  
 
 ## Test Classes
 
