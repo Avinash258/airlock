@@ -1,0 +1,22 @@
+# Kiosk System Configuration
+# Copy this file to config.properties and update with your actual values
+
+# Kiosk URL
+kiosk.url=https://your-kiosk-url.com
+
+# Login Credentials
+username=your_username
+password=your_password
+
+# Browser Configuration
+browser=chrome
+headless=false
+
+# Timeout Settings (in seconds)
+timeout=15
+page.load.timeout=30
+implicit.wait=10
+
+# Screenshot Settings
+screenshot.on.error=true
+screenshot.path=screenshots/

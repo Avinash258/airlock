@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Kiosk Automation Suite" parallel="false" verbose="2">
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="com.kiosk.tests.LoginTest">
+                <methods>
+                    <include name="testLoginPageDisplayed"/>
+                    <include name="testSuccessfulLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Kiosk Automation Flow">
+        <classes>
+            <class name="com.kiosk.tests.KioskAutomationTest"/>
+        </classes>
+    </test>
+    
+</suite>
