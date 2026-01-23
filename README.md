@@ -109,12 +109,7 @@ The CI configuration is located at: `.github/workflows/ci.yml`
 Edit `src/main/resources/config.properties` to customize:
 
 ```properties
-# Kiosk URL
-kiosk.url=https://arjun-up.ryarramsetti.axiadids.net:8442/user
 
-# Login Credentials
-username=arun10
-password=test
 
 # Browser (chrome, firefox, edge)
 browser=chrome
