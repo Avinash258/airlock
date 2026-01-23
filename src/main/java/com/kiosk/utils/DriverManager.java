@@ -62,14 +62,18 @@ public class DriverManager {
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--ignore-ssl-errors");
         options.addArguments("--allow-insecure-localhost");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
+        
+        // Enable headless mode if configured
+        if (ConfigReader.isHeadless()) {
+            options.addArguments("--headless=new");
+        }
         
         // Remove automation flags
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.setExperimentalOption("useAutomationExtension", false);
         options.setAcceptInsecureCerts(true);
-        
-        // Uncomment for headless mode
-        // options.addArguments("--headless");
         
         return new ChromeDriver(options);
     }
@@ -81,7 +85,9 @@ public class DriverManager {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         options.setAcceptInsecureCerts(true);
-        // options.addArguments("--headless"); // Uncomment for headless mode
+        if (ConfigReader.isHeadless()) {
+            options.addArguments("--headless");
+        }
         return new FirefoxDriver(options);
     }
     
@@ -92,7 +98,9 @@ public class DriverManager {
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
         options.setAcceptInsecureCerts(true);
-        // options.addArguments("--headless"); // Uncomment for headless mode
+        if (ConfigReader.isHeadless()) {
+            options.addArguments("--headless");
+        }
         return new EdgeDriver(options);
     }
     

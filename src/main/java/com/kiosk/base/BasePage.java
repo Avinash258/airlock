@@ -174,7 +174,7 @@ public class BasePage {
     /**
      * Wait for page to load
      */
-    protected void waitForPageLoad() {
+    public void waitForPageLoad() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         wait.until(webDriver -> js.executeScript("return document.readyState").equals("complete"));
     }
