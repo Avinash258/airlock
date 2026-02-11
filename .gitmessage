@@ -1,0 +1,31 @@
+# Conventional Commit Message Template
+
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+
+# Types:
+# feat:     A new feature or test case
+# fix:      A bug fix or test fix  
+# docs:     Documentation only changes
+# style:    Formatting, missing semi colons, etc; no code change
+# refactor: A code change that neither fixes a bug nor adds a feature
+# test:     Adding missing or correcting existing tests
+# chore:    Changes to build process or auxiliary tools
+
+# Examples:
+# feat: add login page object with Facebook auth
+# fix: resolve flaky test timeout in checkout flow
+# test: add edge cases for user registration validation
+# docs: update README with new test execution instructions
+# refactor: extract common selector utilities to base page
+
+# Guidelines:
+# - Use imperative mood in the subject line
+# - Keep subject line under 50 characters
+# - Separate subject from body with a blank line
+# - Wrap body at 72 characters
+# - Use body to explain what and why vs. how
+# - Reference issues and pull requests liberally after the description
